@@ -133,7 +133,7 @@ public class KnoteConfigAddResourceHandlersTest {
 	public void testResourceChainArgument() {
 		ResourceHandlerRegistration mockHandler = mock(ResourceHandlerRegistration.class);
 		when(registry.addResourceHandler(anyString())).thenReturn(mockHandler);
-		when(mockHandler.resourceChain(anyBoolean())).thenReturn(mockHandler);
+	// 	when(mockHandler.resourceChain(anyBoolean())).thenReturn(mockHandler);
 
 		knoteConfig.addResourceHandlers(registry);
 
