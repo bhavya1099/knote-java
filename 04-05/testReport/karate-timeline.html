@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.1:33]","start":1722189765750,"end":1722189766005,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.1:33] 23:32:45.750-23:32:46.005 Validate Availability Check with Different Inputs","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.2:33]","start":1722189766015,"end":1722189766025,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.2:33] 23:32:46.015-23:32:46.025 Validate Availability Check with Different Inputs","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[2:35]","start":1722189766030,"end":1722189766043,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[2:35] 23:32:46.030-23:32:46.043 Unauthorized Access","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[3:45]","start":1722189766048,"end":1722189766056,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[3:45] 23:32:46.048-23:32:46.056 Handle Bad Request","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
