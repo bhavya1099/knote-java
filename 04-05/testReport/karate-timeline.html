@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.1:33]","start":1722191295288,"end":1722191295299,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.1:33] 23:58:15.288-23:58:15.299 Validate Availability Check with Different Inputs","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.2:33]","start":1722191295303,"end":1722191295310,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[1.2:33] 23:58:15.303-23:58:15.310 Validate Availability Check with Different Inputs","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[2:35]","start":1722191295314,"end":1722191295321,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[2:35] 23:58:15.314-23:58:15.321 Unauthorized Access","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[3:45]","start":1722191295324,"end":1722191295330,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/availabilityCheck_post[3:45] 23:58:15.324-23:58:15.330 Handle Bad Request","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.1:33]","start":1722191294443,"end":1722191294676,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.1:33] 23:58:14.443-23:58:14.676 Configure service with different parameters","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.2:33]","start":1722191294684,"end":1722191294689,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.2:33] 23:58:14.684-23:58:14.689 Configure service with different parameters","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.3:33]","start":1722191294696,"end":1722191294701,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.3:33] 23:58:14.696-23:58:14.701 Configure service with different parameters","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.4:33]","start":1722191294707,"end":1722191294712,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[1.4:33] 23:58:14.707-23:58:14.712 Configure service with different parameters","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[2:35]","start":1722191294718,"end":1722191294724,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[2:35] 23:58:14.718-23:58:14.724 Unauthorized access to configuration service","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[3:49]","start":1722191294730,"end":1722191294734,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/configuration_post[3:49] 23:58:14.730-23:58:14.734 Bad request to configuration service","className":"failed"},{"id":11,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/listener_configurationResultEvent_post[1.1:30]","start":1722191295443,"end":1722191295447,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/listener_configurationResultEvent_post[1.1:30] 23:58:15.443-23:58:15.447 Test Configuration Result Event with different states and types","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/com\/learnk8s\/api_tests\/listener_configurationResultEvent_post[1.2:30]","start":1722191295451,"end":1722191295454,"title":"src\/test\/java\/com\/learnk8s\/api_tests\/listener_configurationResultEvent_post[1.2:30] 23:58:15.451-23:58:15.454 Test Configuration Result Event with different states and types","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
