@@ -1,0 +1,5 @@
+body,expectedStatus,expectedResponse
+"{"configuration":{"action":{"type":"HGW_WIFI_ENABLE","parameters":{"frequencyBand":"2.4GHz"}},"customer":{"subscriberId":"SVTAL001"}}}","200","{"control":{"type":"S","code":200,"message":"OK"},"configuration":{"id":"78c3ad32-6546-427b-9770-5da5f917277f"}}"
+"{"configuration":{"action":{"type":"HGW_WIFI_DISABLE","parameters":{"frequencyBand":"2.4GHz"}},"customer":{"subscriberId":"SVTAL001"}}}","200","{"control":{"type":"S","code":200,"message":"OK"},"configuration":{"id":"78c3ad32-6546-427b-9770-5da5f917277f"}}"
+"{"configuration":{"action":{"type":"HGW_WIFI_SET_PASSWD","parameters":{"wifiIndex":1,"passwd":"cris621358","mode":"WPAand11i"}},"customer":{"subscriberId":"SVTAL001"}}}","200","{"control":{"type":"S","code":200,"message":"OK"},"configuration":{"id":"78c3ad32-6546-427b-9770-5da5f917277f"}}"
+"{"configuration":{"action":{"type":"GPON_ONT_RESET"},"customer":{"subscriberId":"SVTAL001"}}}","200","{"control":{"type":"S","code":200,"message":"OK"},"configuration":{"id":"78c3ad32-6546-427b-9770-5da5f917277f"}}"
