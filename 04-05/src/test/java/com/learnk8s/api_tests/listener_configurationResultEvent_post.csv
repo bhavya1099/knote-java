@@ -1,0 +1,3 @@
+payload,expectedStatus,expectedResponse
+"{"state":"active","type":"A"}","200","{"status":"ok"}"
+"{"state":"inactive","type":"B"}","400","{"status":"error"}"
