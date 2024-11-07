@@ -38,29 +38,32 @@ Details:
     Assert: Use JUnit assertions to check if the returned value is an empty string.
   Validation:
     The assertion aims to verify that the toString method correctly handles empty string descriptions. This is important to ensure that the toString method is working as expected in all scenarios.
+
+roost_feedback [11/7/2024, 7:35:50 AM]:- Add more comments to the test
 */
 
 // ********RoostGPT********
 
 package com.learnk8s.knote.Note;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import static org.junit.Assert.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 public class NoteToStringTest {
+
+    private Note note;
+
+    @Before
+    public void setup() {
+        note = new Note();
+    }
 
 	@Test
 	@Category(Categories.valid.class)
 	public void testToStringWhenDescriptionIsNotNull() {
 		// Arrange
-		Note note = new Note();
 		note.setDescription("Test Description");
 		// Act
 		String returnedDescription = note.toString();
@@ -72,7 +75,6 @@ public class NoteToStringTest {
 	@Category(Categories.invalid.class)
 	public void testToStringWhenDescriptionIsNull() {
 		// Arrange
-		Note note = new Note();
 		note.setDescription(null);
 		// Act
 		String returnedDescription = note.toString();
@@ -84,7 +86,6 @@ public class NoteToStringTest {
 	@Category(Categories.boundary.class)
 	public void testToStringWhenDescriptionIsEmpty() {
 		// Arrange
-		Note note = new Note();
 		note.setDescription("");
 		// Act
 		String returnedDescription = note.toString();
