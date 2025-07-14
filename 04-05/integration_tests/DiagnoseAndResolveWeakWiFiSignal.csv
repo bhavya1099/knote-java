@@ -1,0 +1,11 @@
+subscriberId^|^statusCode^|^scenario
+123456789^|^Active^|^Scenario1
+987654321^|^Inactive^|^Scenario2
+654321789^|^Active^|^Scenario3
+321654987^|^Inactive^|^Scenario4
+258147369^|^Active^|^Scenario5
+963258741^|^Inactive^|^Scenario6
+159753468^|^Active^|^Scenario7
+357951486^|^Inactive^|^Scenario8
+951357486^|^Active^|^Scenario9
+753159642^|^Inactive^|^Scenario10
